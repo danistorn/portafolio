@@ -1,0 +1,583 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+
+header {
+    background-image:
+     linear-gradient(rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.2)), url(../img/fondo3.jpg);
+    background-size: cover;
+    background-position: center;
+    /* width: 100vw; */
+    min-height: 500px;
+    height: 100vh;
+    
+}
+
+
+nav{
+    --state-close: scale(0);  /*por defecto, la X no se va a mostrar*/
+    --state-hamburguer: scale(1);  /*Por defecto se mostrará el menu hamburguer*/
+    --state-menu: translate(-100%);
+
+    position: fixed; /*Para que se ponga encima del fondo, fijado ahi arriba*/
+    top:0;
+    left: 0;
+    width: 100%;
+    
+    padding: 15px 0px;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: repeat(2, max-content);
+    transition: 0.7s;
+    z-index: 1; /*para que la img de fondo y la mano saludando no tape el nav */    
+    height: 100%;
+
+}
+
+.nav:target{
+    --state-close: scale(1);  /*por defecto, la X no se va a mostrar*/
+    --state-hamburguer: scale(0);  /*Por defecto se mostrará el menu hamburguer*/
+    --state-menu: translate(0);
+    
+}
+
+
+
+
+.container{     /*otra class de nav*/
+    margin: 0 auto;
+    width: 100%;
+    max-width: 2560px;
+    overflow: hidden;
+    /* height: 4.5rem; */
+}
+
+
+
+
+
+.nav_idiomas{
+    display: flex;
+    /* margin: 0px 25px 0px 0px; */
+}
+
+.nav_idiomas .idioma{
+    margin: 0px 10px;
+    overflow: hidden;
+}
+
+.nav_idiomas img{
+    width: 40px;
+}
+
+
+header .presentacion{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    text-align: center; /*Las letras en el centro, horizontalmente*/
+    display: flex; /*para poder centrarlo luego verticalmente con "justify-content*/
+    flex-direction: column; /*para que quede un renglon abajo del otro*/
+    justify-content: center;    /*para que quede en el centro, verticalmente*/
+
+    font-size: 1.6rem;
+    letter-spacing: 0.4rem;
+    font-family: 'Playfair Display', serif;
+    
+}
+
+
+
+
+.nav_hamburguer, /*para posicionar los dos iconos (X y ///) en la misma celda de la grid*/
+.nav_close {
+    grid-column: -2/-1;
+    grid-row: 1/2;
+    transition: .4s transform;
+    font-size: 2.5rem;
+    padding: 5px 15px 0px 0px;  
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
+}
+
+
+
+.nav_logo{
+    padding: 0px 0px 0px 15px;    
+    font-size: 2.4rem; /*seria WIDTH si se tratara de una img, pero es un <i> */
+    z-index: 1;
+}
+
+.nav_logo a{
+    /* color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+    font: 800 40px Arial;
+    -webkit-text-fill-color:aliceblue;
+    -webkit-text-stroke: 1px;
+}
+
+
+.nav_hamburguer{
+    transform: var(--state-hamburguer);
+}
+
+.nav_close{
+    transform: var(--state-close);
+}
+
+
+
+
+
+
+
+
+
+
+
+.nav_links{
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    padding: 0;
+
+    display: grid;
+    align-content: center;
+    gap: 2em;
+    padding-left: 5%;
+
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    transform: var(--state-menu);
+    transition: .3s transform;
+}
+
+
+.nav_links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+
+}
+
+.nav_idiomas{
+    display: none;
+}
+
+
+
+
+
+
+
+/*///////////////////// Sobre mi ///////////////////*/
+
+.sobre-mi{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 25rem), 1fr));
+    /* grid-template-columns: repeat(2, 1fr); */
+    align-items: center;
+    justify-items: center;
+
+
+    padding:10%;
+
+    background-color: beige;
+}
+
+
+
+#sobre-mi .contenedor-foto img {
+    width:20rem;
+    padding: 12px;
+    width:300px;
+    height:300px;
+    border-radius: 50%;
+}
+
+#sobre-mi p{
+    margin: 12px 0;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 550;
+    font-size: 1.7em;
+}
+
+#sobre-mi a{
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    margin-top: 30px;
+    transition: .5s;
+}
+
+#sobre-mi a:hover{
+    background-color: rgb(170, 148, 169);
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+/* ///////////  Habilidades /////////////*/
+
+.habilidades{
+
+}
+
+
+.habilidades .titulo_mis-habilidades{
+    text-align: center;
+    margin: 3%;
+}
+
+
+.container_habilidades{
+    margin: 5em 5em; /*margen a los costados de las habilidades*/
+}
+
+
+.habilidades-icons{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+    justify-items: center;
+
+    /* display: flex;
+    justify-content: center; */
+
+
+    /* margin: 50px;
+    height: 100px; */
+
+
+}
+
+
+
+
+
+
+.habilidades-icons img{
+    height: 9rem;
+    margin: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*///////////////  Proyectos //////////////*/
+#proyectos {
+    /* padding: 2rem;
+    height: 50em;
+     */
+    background-color:rgb(170, 148, 169);
+}
+
+.proyectos {
+    /* display: grid;       El TITULO y las CARDS. Uno abajo del otro.
+    grid-template-columns: auto;
+    align-items: space-around; */
+    /*align-items: center;
+    justify-items:center;
+    position: relative; */
+}
+
+.proyectos .titulo_proyectos{
+    text-align: center;
+    margin: 3%;
+}
+
+
+
+#proyectos .proyectos .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 25rem), 1fr));
+    overflow: hidden;
+    justify-items: center;
+    margin-bottom: 5rem;
+    /* place-content: center center; */
+}
+
+
+.card-proyecto{
+    width: 100%;
+    overflow: hidden;
+    margin: 20px;
+
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.9);
+    width: 280px;
+}
+
+
+#proyectos .card-proyecto .foto-proyecto{
+    transition: 1s;
+}
+
+
+
+@media (hover:hover) {
+    .foto-proyecto:hover{
+        filter: grayscale(100);
+        transition: 1s;
+    }
+}
+
+
+
+#proyectos .card-proyecto .info{
+    padding: 1rem 1rem;
+    height:11.5rem;
+    background-color: #fff;
+    border: 0.125 solid #000;
+}
+
+#proyectos .cards .card-proyecto .info .titulo-proyecto{
+    text-align: left;
+    margin-bottom:2.5rem;
+    font-family: 'Tajawal', sans-serif;
+    font-size: large;
+}
+
+#proyectos .cards .card-proyecto .info h5{
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+
+
+#proyectos .cards .card-proyecto .info p{
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+#proyectos .cards .card-proyecto .info .html5{
+    color:orangered;
+    text-transform:uppercase;
+}
+
+#proyectos .cards .card-proyecto .info .css{
+    color: rgb(54, 149, 179);
+    text-transform:uppercase;
+}
+
+#proyectos .cards .card-proyecto .info .js{
+    color: goldenrod;
+    text-transform:uppercase;
+}
+
+#proyectos .cards .card-proyecto .info .apis{
+    color:rgb(240, 12, 171);
+}
+
+
+
+.card-proyecto a img{
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,09);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*////////////// footer ///////////////*/
+
+footer{
+    display: block;
+}
+
+#footer{
+    /*background-color: #d1d1d1;*/
+    display: flex;
+    justify-content: space-between;
+    padding: 0.1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+    font-weight: 500;
+
+}
+
+
+
+
+#footer .contact-icons {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+
+#footer .contact-icons li{
+    float: left;
+}
+
+#footer .contact-icons li a{
+    display: block;
+    margin: 2px;
+    padding: 5px 12px;
+    font-size: 30px;
+}
+
+footer .links{
+    width: 10px;
+}
+
+
+
+
+
+.logo,
+.sobre-mi,
+.habilidades,
+.proyectos  {
+    margin-top: 100px;
+}
+
+
+
+
+
+
+@media (min-width: 768px) {     /* /////////// TAMAÑO GRANDE, TIPO COMPU  ///////*/
+ 
+    
+    nav{
+        --state-hamburguer: scale(0);  /*Por defecto se mostrará el menu hamburguer*/
+        --state-menu: translate(0);
+        height: 100vh;
+        height: 4.5rem;   
+
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: repeat(4, max-content);
+    }
+
+
+    
+    .nav:target{
+        --state-close: scale(0);  /*por defecto, la X no se va a mostrar*/
+        
+    }
+    
+    
+
+
+    
+    .nav .nav_links{
+        padding: 0;
+        background-color: unset; 
+        position:unset; 
+        gap: 1.5em;
+        
+        transform: unset;
+        grid-auto-flow: column;
+        grid-column: -3/-2;
+        
+    }
+
+    .nav_logo{
+        overflow: hidden;
+    }
+
+
+    .nav_links a.abajo{
+        color: #fff;
+    }
+
+
+    header .nav.abajo{
+        background: black;
+        color: #fff;
+    }
+    
+    .nav_logo.abajo{
+        color: #fff;
+    }
+
+
+    .nav_idiomas{
+        display: flex;
+        grid-auto-flow: column;
+        grid-column: -2/-1;
+        grid-row: 1/2;
+        /* margin: 0px 25px 0px 0px; */
+    }
+    
+    .nav_idiomas .idioma{
+        margin: 0px 10px;
+        overflow: hidden;
+    }
+    
+    .nav_idiomas img{
+        width: 40px;
+    }   
+
+}
