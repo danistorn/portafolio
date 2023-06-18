@@ -40,7 +40,7 @@ nav{
     grid-template-rows: repeat(2, max-content);
     transition: 0.7s;
     z-index: 1; /*para que la img de fondo y la mano saludando no tape el nav */    
-    height: 100%;
+    
 
 }
 
@@ -134,10 +134,13 @@ header .presentacion{
 
 .nav_close{
     transform: var(--state-close);
+    color: #fff;
 }
 
 
-
+.nav.open {
+    height: 100%;    
+}
 
 
 
@@ -349,18 +352,42 @@ header .presentacion{
 }
 
 
-#proyectos .card-proyecto .foto-proyecto{
+#proyectos .card-proyecto .foto-proyecto1{
+    transition: 1s;
+}
+
+#proyectos .card-proyecto .foto-proyecto2{
+    transition: 1s;
+    
+}
+
+#proyectos .card-proyecto .foto-proyecto3{
     transition: 1s;
 }
 
 
 
 @media (hover:hover) {
-    .foto-proyecto:hover{
+    .foto-proyecto1:hover{
         filter: grayscale(100);
         transition: 1s;
     }
 }
+
+@media (hover:hover) {
+    .foto-proyecto2:hover{
+        filter: grayscale(100);
+        transition: 1s;
+    }
+}
+
+@media (hover:hover) {
+    .foto-proyecto3:hover{
+        filter: grayscale(100);
+        transition: 1s;
+    }
+}
+
 
 
 
@@ -424,9 +451,24 @@ header .presentacion{
 
 
 
+.nav_links a.abajo{
+    color: #fff;
+}
 
 
+header .nav.abajo{
+    background: black;
+    color: #fff;
+}
 
+.nav_logo.abajo{
+    color: #fff;
+}
+
+
+.nav_hamburguer.abajo{
+    color: #fff;
+}
 
 
 
@@ -510,7 +552,7 @@ footer .links{
  
     
     nav{
-        --state-hamburguer: scale(0);  /*Por defecto se mostrará el menu hamburguer*/
+        --state-hamburguer: scale(0); 
         --state-menu: translate(0);
         height: 100vh;
         height: 4.5rem;   
