@@ -190,7 +190,7 @@ header .presentacion{
 
 .sobre-mi{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 25rem), 1fr));
+    grid-template-columns: 1fr 2fr;
     /* grid-template-columns: repeat(2, 1fr); */
     align-items: center;
     justify-items: center;
@@ -201,6 +201,16 @@ header .presentacion{
     background-color: beige;
 }
 
+
+
+@media (max-width: 1076px) {
+    .sobre-mi{
+        display: grid;
+        grid-template-columns: auto;
+        
+    }
+    
+}
 
 
 #sobre-mi .contenedor-foto img {
