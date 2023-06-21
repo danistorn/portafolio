@@ -1,0 +1,23 @@
+.habilidades .titulo_mis-habilidades{
+    text-align: center;
+    margin: 3%;
+}
+
+
+.container_habilidades{
+    margin: 5em 5em; /*margen a los costados de las habilidades*/
+}
+
+
+.habilidades-icons{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+    justify-items: center;
+}
+
+
+.habilidades-icons img{
+    height: 9rem;
+    margin: 1em;
+}
+
