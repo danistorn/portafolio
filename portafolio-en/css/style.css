@@ -33,7 +33,6 @@ nav{
     position: fixed; /*Para que se ponga encima del fondo, fijado ahi arriba*/
     top:0;
     left: 0;
-    width: 90%;
     margin:auto;
     
     padding: 5px 0px;
@@ -43,10 +42,12 @@ nav{
     grid-template-rows: repeat(2, max-content);
     transition: 0.7s;
     z-index: 1; /*para que la img de fondo y la mano saludando no tape el nav */    
+    
+    /* El width a 100 para que al abrir el menu hamburguesa ocupe el 100 del ancho de la pantalla */
+    width: 100%;
+    /* El height a 100 para que al abrir el menu hamburguesa ocupe el 100 del largo de la pantalla */
     height: 100%;
 
-    margin: 0 auto;
-    width: 100%;
     max-width: 2560px;
     overflow: hidden;
     
@@ -59,11 +60,6 @@ nav{
     --state-menu: translate(0);
     
 }
-
-
-
-
-
 
 
 
@@ -135,6 +131,7 @@ header .presentacion{
 
 .nav_close{
     transform: var(--state-close);
+    color: #fff;
 }
 
 
@@ -186,13 +183,37 @@ header .presentacion{
 
 
 
+
+
+
+.nav_links a.abajo{
+    color: #fff;
+}
+
+
+header .nav.abajo{
+    background: black;
+    color: #fff;
+}
+
+.nav_logo.abajo{
+    color: #fff;
+}
+
+
+.nav_hamburguer.abajo{
+    color: #fff;
+}
+
+
+
+
 .logo,
 .sobre-mi,
 .habilidades,
 .proyectos  {
     margin-top: 100px;
 }
-
 
 
 
@@ -223,9 +244,6 @@ header .presentacion{
     
     .nav .nav_links{
         padding: 0;
-
-
-
         background-color: unset; 
         position:unset; 
         gap: 1.5em;

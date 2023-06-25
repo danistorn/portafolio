@@ -18,7 +18,6 @@ window.addEventListener('scroll', function(){
 
 
 
-
 window.addEventListener('scroll', function(){
     var a = document.querySelector('.nav_sobre-mi');
     a.classList.toggle("abajo", window.scrollY>0);
