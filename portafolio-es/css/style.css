@@ -1,4 +1,6 @@
 
+/* MOBILE FIRST  */
+
 *{
     margin:0;
     padding:0;
@@ -31,7 +33,11 @@ nav{
     position: fixed; /*Para que se ponga encima del fondo, fijado ahi arriba*/
     top:0;
     left: 0;
+    
+    /* El width a 100 para que al abrir el menu hambruguesa ocupe el  del ancho de la pantalla */
     width: 100%;
+    /* El width a 100 para que al abrir el menu hambruguesa ocupe el  del ancho de la pantalla */
+    
     
     padding: 15px 0px;
     display: grid;
