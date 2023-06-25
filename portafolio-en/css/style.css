@@ -1,4 +1,6 @@
 
+/* MOBILE FIRST  */
+
 *{
     margin:0;
     padding:0;
@@ -31,18 +33,27 @@ nav{
     position: fixed; /*Para que se ponga encima del fondo, fijado ahi arriba*/
     top:0;
     left: 0;
-    width: 100%;
+    margin:auto;
     
-    padding: 15px 0px;
+    padding: 5px 0px;
     display: grid;
     justify-content: space-between;
     grid-template-columns: repeat(2, max-content);
     grid-template-rows: repeat(2, max-content);
     transition: 0.7s;
     z-index: 1; /*para que la img de fondo y la mano saludando no tape el nav */    
-    height: 100%;
+    
+    /* El width 100 lo coloco en el nav general para que se cumplan varias cosas A LA VEZ. (y no tenga que ponerselas una por una): */
+    /* - El width a 100 para que al abrir el menu hamburguesa ocupe el 100 del ancho de la pantalla */
+    /* - también para que al bajar y aparezca negro siga ocupando el 100  */
+    width: 100%;
+    
 
+    max-width: 2560px;
+    overflow: hidden;
+    
 }
+
 
 .nav:target{
     --state-close: scale(1);  /*por defecto, la X no se va a mostrar*/
@@ -50,19 +61,6 @@ nav{
     --state-menu: translate(0);
     
 }
-
-
-
-
-.container{     /*otra class de nav*/
-    margin: 0 auto;
-    width: 100%;
-    max-width: 2560px;
-    overflow: hidden;
-    /* height: 4.5rem; */
-}
-
-
 
 
 
@@ -134,10 +132,14 @@ header .presentacion{
 
 .nav_close{
     transform: var(--state-close);
+    color: #fff;
 }
 
-
-
+.nav.open {
+    /* El height a 100 para que al abrir el menu hamburguesa ocupe el 100 del largo de la pantalla */
+    /* Lo coloco acá y no en el nav general para que solo ocupe el 100 cuando lo abro. No se vería pero si se veria la sombra de que se abre cuando bajo*/
+    height: 100%;    
+}
 
 
 
@@ -186,320 +188,27 @@ header .presentacion{
 
 
 
-/*///////////////////// Sobre mi ///////////////////*/
-
-.sobre-mi{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    /* grid-template-columns: repeat(2, 1fr); */
-    align-items: center;
-    justify-items: center;
 
 
-    padding:10%;
-
-    background-color: beige;
-}
-
-
-
-@media (max-width: 1076px) {
-    .sobre-mi{
-        display: grid;
-        grid-template-columns: auto;
-        
-    }
-    
-}
-
-
-#sobre-mi .contenedor-foto img {
-    width:20rem;
-    padding: 12px;
-    width:300px;
-    height:300px;
-    border-radius: 50%;
-}
-
-#sobre-mi p{
-    margin: 12px 0;
-    font-family: 'Tajawal', sans-serif;
-    font-weight: 550;
-    font-size: 1.7em;
-}
-
-#sobre-mi a{
-    display: inline-block;
-    text-decoration: none;
-    color: #000;
-    border-radius: 30px;
-    padding: 10px 20px;
-    border: 1px solid #000;
-    margin-top: 30px;
-    transition: .5s;
-}
-
-#sobre-mi a:hover{
-    background-color: rgb(170, 148, 169);
+.nav_links a.abajo{
     color: #fff;
 }
 
 
+header .nav.abajo{
+    background: black;
+    color: #fff;
+    height: 4.5rem;   
+}
 
-
-
-
-
-
-
-
-/* ///////////  Habilidades /////////////*/
-
-.habilidades{
-
+.nav_logo.abajo{
+    color: #fff;
 }
 
 
-.habilidades .titulo_mis-habilidades{
-    text-align: center;
-    margin: 3%;
+.nav_hamburguer.abajo{
+    color: #fff;
 }
-
-
-.container_habilidades{
-    margin: 5em 5em; /*margen a los costados de las habilidades*/
-}
-
-
-.habilidades-icons{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
-    justify-items: center;
-
-    /* display: flex;
-    justify-content: center; */
-
-
-    /* margin: 50px;
-    height: 100px; */
-
-
-}
-
-
-
-
-
-
-.habilidades-icons img{
-    height: 9rem;
-    margin: 1em;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*///////////////  Proyectos //////////////*/
-#proyectos {
-    /* padding: 2rem;
-    height: 50em;
-     */
-    background-color:rgb(170, 148, 169);
-}
-
-.proyectos {
-    /* display: grid;       El TITULO y las CARDS. Uno abajo del otro.
-    grid-template-columns: auto;
-    align-items: space-around; */
-    /*align-items: center;
-    justify-items:center;
-    position: relative; */
-}
-
-.proyectos .titulo_proyectos{
-    text-align: center;
-    margin: 3%;
-}
-
-
-
-#proyectos .proyectos .cards{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 25rem), 1fr));
-    overflow: hidden;
-    justify-items: center;
-    margin-bottom: 5rem;
-    /* place-content: center center; */
-}
-
-
-.card-proyecto{
-    width: 100%;
-    overflow: hidden;
-    margin: 20px;
-
-    box-shadow: 0px 1px 3px rgba(0,0,0,0.9);
-    width: 280px;
-}
-
-
-#proyectos .card-proyecto .foto-proyecto{
-    transition: 1s;
-}
-
-
-
-@media (hover:hover) {
-    .foto-proyecto:hover{
-        filter: grayscale(100);
-        transition: 1s;
-    }
-}
-
-
-
-#proyectos .card-proyecto .info{
-    padding: 1rem 1rem;
-    height:11.5rem;
-    background-color: #fff;
-    border: 0.125 solid #000;
-}
-
-#proyectos .cards .card-proyecto .info .titulo-proyecto{
-    text-align: left;
-    margin-bottom:2.5rem;
-    font-family: 'Tajawal', sans-serif;
-    font-size: large;
-}
-
-#proyectos .cards .card-proyecto .info h5{
-    margin-bottom: 0.5rem;
-    font-size: 1.3rem;
-    text-align: center;
-}
-
-
-
-#proyectos .cards .card-proyecto .info p{
-    font-weight: bold;
-    font-size: 0.9rem;
-    font-family: "Oswald", sans-serif;
-    text-align: center;
-    margin-top: 1.5em;
-}
-
-#proyectos .cards .card-proyecto .info .html5{
-    color:orangered;
-    text-transform:uppercase;
-}
-
-#proyectos .cards .card-proyecto .info .css{
-    color: rgb(54, 149, 179);
-    text-transform:uppercase;
-}
-
-#proyectos .cards .card-proyecto .info .js{
-    color: goldenrod;
-    text-transform:uppercase;
-}
-
-#proyectos .cards .card-proyecto .info .apis{
-    color:rgb(240, 12, 171);
-}
-
-
-
-.card-proyecto a img{
-    object-fit: cover;
-    width: 100%;
-    height: 250px;
-    box-shadow: 1px 1px 1px rgba(0,0,0,09);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*////////////// footer ///////////////*/
-
-footer{
-    display: block;
-}
-
-#footer{
-    /*background-color: #d1d1d1;*/
-    display: flex;
-    justify-content: space-between;
-    padding: 0.1rem;
-    padding-left: 20px;
-    padding-right: 20px;
-    align-items: center;
-    font-weight: 500;
-
-}
-
-
-
-
-#footer .contact-icons {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-
-
-#footer .contact-icons li{
-    float: left;
-}
-
-#footer .contact-icons li a{
-    display: block;
-    margin: 2px;
-    padding: 5px 12px;
-    font-size: 30px;
-}
-
-footer .links{
-    width: 10px;
-}
-
 
 
 
@@ -515,14 +224,12 @@ footer .links{
 
 
 
-
 @media (min-width: 768px) {     /* /////////// TAMAÑO GRANDE, TIPO COMPU  ///////*/
  
     
     nav{
         --state-hamburguer: scale(0);  /*Por defecto se mostrará el menu hamburguer*/
         --state-menu: translate(0);
-        height: 100vh;
         height: 4.5rem;   
 
         display: grid;
@@ -537,8 +244,6 @@ footer .links{
         
     }
     
-    
-
 
     
     .nav .nav_links{
@@ -587,7 +292,8 @@ footer .links{
     }
     
     .nav_idiomas img{
-        width: 40px;
+        padding: 5px 0;
+        width: 45px;
     }   
 
 }

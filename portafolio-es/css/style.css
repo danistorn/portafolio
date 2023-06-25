@@ -1,5 +1,5 @@
 
-/* MOBILE FIRST  */
+/* MOBIE FIRST */
 
 *{
     margin:0;
@@ -33,13 +33,9 @@ nav{
     position: fixed; /*Para que se ponga encima del fondo, fijado ahi arriba*/
     top:0;
     left: 0;
+    margin:auto;
     
-    /* El width a 100 para que al abrir el menu hambruguesa ocupe el  del ancho de la pantalla */
-    width: 100%;
-    /* El width a 100 para que al abrir el menu hambruguesa ocupe el  del ancho de la pantalla */
-    
-    
-    padding: 15px 0px;
+    padding: 5px 0px;
     display: grid;
     justify-content: space-between;
     grid-template-columns: repeat(2, max-content);
@@ -47,7 +43,14 @@ nav{
     transition: 0.7s;
     z-index: 1; /*para que la img de fondo y la mano saludando no tape el nav */    
     
+    /* El width 100 lo coloco en el nav general para que se cumplan varias cosas A LA VEZ. (y no tenga que ponerselas una por una): */
+    /* - El width a 100 para que al abrir el menu hamburguesa ocupe el 100 del ancho de la pantalla */
+    /* - también para que al bajar y aparezca negro siga ocupando el 100  */
+    width: 100%;
+    
 
+    max-width: 2560px;
+    overflow: hidden;
 }
 
 .nav:target{
@@ -56,19 +59,6 @@ nav{
     --state-menu: translate(0);
     
 }
-
-
-
-
-.container{     /*otra class de nav*/
-    margin: 0 auto;
-    width: 100%;
-    max-width: 2560px;
-    overflow: hidden;
-    /* height: 4.5rem; */
-}
-
-
 
 
 
@@ -145,8 +135,12 @@ header .presentacion{
 
 
 .nav.open {
+    /* El height a 100 para que al abrir el menu hamburguesa ocupe el 100 del largo de la pantalla */
+    /* Lo coloco acá y no en el nav general para que solo ocupe el 100 cuando lo abro. No se vería pero si se veria la sombra de que se abre cuando bajo*/
     height: 100%;    
 }
+
+
 
 
 
@@ -198,8 +192,6 @@ header .presentacion{
 
 
 
-
-
 .nav_links a.abajo{
     color: #fff;
 }
@@ -219,7 +211,6 @@ header .nav.abajo{
 .nav_hamburguer.abajo{
     color: #fff;
 }
-
 
 
 
@@ -259,7 +250,6 @@ header .nav.abajo{
     
     
 
-
     
     .nav .nav_links{
         padding: 0;
@@ -298,7 +288,6 @@ header .nav.abajo{
         grid-auto-flow: column;
         grid-column: -2/-1;
         grid-row: 1/2;
-        /* margin: 0px 25px 0px 0px; */
     }
     
     .nav_idiomas .idioma{
@@ -307,7 +296,8 @@ header .nav.abajo{
     }
     
     .nav_idiomas img{
-        width: 40px;
+        padding: 5px 0;
+        width: 45px;
     }   
 
 }

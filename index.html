@@ -48,45 +48,50 @@
 
     <header id="header"> <!-- nav + Presentación -->         
 
-        <nav class="nav container" id="nav">
+
+            <nav class="nav" id="nav">
+                
+                
+                <h2 class="nav_logo"><a href="#logo">DaniStor</a></h2>    
+                
+                
+                <ul class="nav_links"> 
+                    <li><a href="#sobre-mi" class="nav_sobre-mi" onclick="clickClose()">Sobre mí</a></li>
+                    <li><a href="#habilidades" class="nav_conocimiento link" onclick="clickClose()">Habilidades</a></li>
+                    <li><a href="#proyectos" class="nav_proyectos link" onclick="clickClose()">Proyectos</a></li>
+                    <!-- <li><a href="#contacto" class="nav_contacto">Contacto</a></li> -->
+                </ul>    
             
             
-            <h2 class="nav_logo"><a href="#logo">DaniStor</a></h2>    
-            
-            
-            <ul class="nav_links"> 
-                <li><a href="#sobre-mi" class="nav_sobre-mi" onclick="clickClose()">Sobre mí</a></li>
-                <li><a href="#habilidades" class="nav_conocimiento link" onclick="clickClose()">Habilidades</a></li>
-                <li><a href="#proyectos" class="nav_proyectos link" onclick="clickClose()">Proyectos</a></li>
-                <!-- <li><a href="#contacto" class="nav_contacto">Contacto</a></li> -->
-            </ul>    
-        
-        
-            <div class="nav_idiomas">
-                <div class="idioma español">
-                    <img src="portafolio-es/img/español.png">
+                <div class="nav_idiomas">
+
+                    <div class="idioma español">
+                        <img src="portafolio-es/img/español.png">
+                    </div>
+                    <div class="idioma english">
+                        <a href="portafolio-en/index.html">
+                        <img src="portafolio-en/img/english.png">
+                        </a>
+                    </div>
+                    
                 </div>
-                <div class="idioma english">
-                    <a href="portafolio-en/index.html">
-                    <img src="portafolio-en/img/english.png">
+        
+            
+                <!--MENU HAMBURGUESA-->
+                
+                    <a href="#nav" class="nav_hamburguer" onclick="clickOpen()">
+                        <i class="fa-solid fa-bars nav_icon"></i>
                     </a>
-                </div>
-            </div>
-    
-        
-            <!--MENU HAMBURGUESA-->
+
+                    <a href="#" class="nav_close" onclick="clickClose()">
+                        <i class="fa-solid fa-x nav_icon"></i>
+                    </a>
             
-                <a href="#nav" class="nav_hamburguer" onclick="clickOpen()">
-                    <i class="fa-solid fa-bars nav_icon"></i>
-                </a>
+        
 
-                <a href="#" class="nav_close" onclick="clickClose()">
-                    <i class="fa-solid fa-x nav_icon"></i>
-                </a>
-          
-      
+            </nav>
 
-        </nav>
+
 
 
         <div id="logo" class="presentacion">

@@ -1,7 +1,7 @@
 
 
 window.addEventListener('scroll', function(){
-    var nav = document.querySelector('nav');
+    var nav = document.querySelector('.nav');
     nav.classList.toggle("abajo", window.scrollY>0);
 
 })
@@ -15,7 +15,6 @@ window.addEventListener('scroll', function(){
     var a = document.querySelector('.nav_logo');
     a.classList.toggle("abajo", window.scrollY>0);  
 })
-
 
 
 
@@ -42,6 +41,27 @@ window.addEventListener('scroll', function(){
     a.classList.toggle("abajo", window.scrollY>0);  
 })
 
+
+window.addEventListener('scroll', function(){
+    var a = document.querySelector('.nav_hamburguer');
+    a.classList.toggle("abajo", window.scrollY>0);  
+})
+
+
+
+
+
+
+
+function clickOpen() {
+    const nav = document.querySelector('nav');
+    nav.classList.add('open');
+}
+
+function clickClose() {
+    const nav = document.querySelector('nav');
+    nav.classList.remove('open');
+}
 
 
 

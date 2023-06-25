@@ -1,0 +1,58 @@
+
+.sobre-mi{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* grid-template-columns: repeat(2, 1fr); */
+    align-items: center;
+    justify-items: center;
+
+
+    padding:10%;
+
+    background-color: beige;
+}
+
+
+
+@media (max-width: 1076px) {
+    .sobre-mi{
+        display: grid;
+        grid-template-columns: auto;
+        
+    }
+    
+}
+
+
+#sobre-mi .contenedor-foto img {
+    width:20rem;
+    padding: 12px;
+    width:300px;
+    height:300px;
+    border-radius: 50%;
+}
+
+#sobre-mi p{
+    margin: 12px 0;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 550;
+    font-size: 1.7em;
+}
+
+#sobre-mi a{
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    margin-top: 30px;
+    transition: .5s;
+}
+
+#sobre-mi a:hover{
+    background-color: rgb(170, 148, 169);
+    color: #fff;
+}
+
+
