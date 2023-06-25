@@ -126,20 +126,6 @@ header .presentacion{
 }
 
 
-.nav_hamburguer{
-    transform: var(--state-hamburguer);
-}
-
-.nav_close{
-    transform: var(--state-close);
-    color: #fff;
-}
-
-.nav.open {
-    /* El height a 100 para que al abrir el menu hamburguesa ocupe el 100 del largo de la pantalla */
-    /* Lo coloco acá y no en el nav general para que solo ocupe el 100 cuando lo abro. No se vería pero si se veria la sombra de que se abre cuando bajo*/
-    height: 100%;    
-}
 
 
 
@@ -187,6 +173,30 @@ header .presentacion{
 
 
 
+
+
+.nav_hamburguer{
+    transform: var(--state-hamburguer);
+}
+
+.nav_close{
+    transform: var(--state-close);
+    color: #fff;
+}
+
+.nav.open {
+    /* El height a 100 para que al abrir el menu hamburguesa ocupe el 100 del largo de la pantalla */
+    /* Lo coloco acá y no en el nav general para que solo ocupe el 100 cuando lo abro. No se vería pero si se veria la sombra de que se abre cuando bajo*/
+    height: 100%;    
+}
+
+
+
+header .nav.abajo.open{
+    background: black;
+    color: #fff;
+    height: 100%;
+}
 
 
 
