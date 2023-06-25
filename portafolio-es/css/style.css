@@ -195,6 +195,7 @@ header .presentacion{
 header .nav.abajo{
     background: black;
     color: #fff;
+    height: 4.5rem;   
 }
 
 .nav_logo.abajo{
@@ -228,8 +229,8 @@ header .nav.abajo{
     nav{
         --state-hamburguer: scale(0); 
         --state-menu: translate(0);
-        height: 100vh;
-        height: 4.5rem;   
+        
+        height: 4.5rem;
 
         display: grid;
         justify-content: space-between;
