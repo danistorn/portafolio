@@ -176,6 +176,19 @@ header .presentacion{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 .nav_close{
     transform: var(--state-close);
     color: #fff;
@@ -188,8 +201,6 @@ header .presentacion{
     height: 100%;    
 }
 
-
-
 .nav_links a.abajo{
     color: #fff;
 }
@@ -200,9 +211,11 @@ header .nav.abajo{
     height: 4.5rem;   
 }
 
-
-
-
+header .nav.abajo.open{
+    background: black;
+    color: #fff;
+    height: 100%;
+}
 
 .nav_logo.abajo{
     color: #fff;
