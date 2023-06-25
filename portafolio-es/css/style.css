@@ -1,5 +1,5 @@
 
-/* MOBIE FIRST */
+/* MOBILE FIRST */
 
 *{
     margin:0;
@@ -14,8 +14,8 @@
 
 header {
     background-image:
-     linear-gradient(rgba(0, 0, 0, 0.1),
-      rgba(0, 0, 0, 0.2)), url(../img/fondo3.jpg);
+     linear-gradient(rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.5) 15%, rgb(0,0,0,0.2) 40%), url(../img/fondo3.jpg);
     background-size: cover;
     background-position: center;
     /* width: 100vw; */
@@ -169,11 +169,12 @@ header .presentacion{
 
 
 
-
-
 .nav_hamburguer{
     transform: var(--state-hamburguer);
 }
+
+
+
 
 .nav_close{
     transform: var(--state-close);
@@ -187,18 +188,11 @@ header .presentacion{
     height: 100%;    
 }
 
-header .nav.abajo.open{
-    background: black;
-    color: #fff;
-    height: 100%;
-}
-
 
 
 .nav_links a.abajo{
     color: #fff;
 }
-
 
 header .nav.abajo{
     background: black;
@@ -206,10 +200,13 @@ header .nav.abajo{
     height: 4.5rem;   
 }
 
+
+
+
+
 .nav_logo.abajo{
     color: #fff;
 }
-
 
 .nav_hamburguer.abajo{
     color: #fff;
