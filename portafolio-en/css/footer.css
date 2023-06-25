@@ -1,0 +1,43 @@
+
+footer{
+    display: block;
+}
+
+#footer{
+    /*background-color: #d1d1d1;*/
+    display: flex;
+    justify-content: space-between;
+    padding: 0.1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+    font-weight: 500;
+
+}
+
+
+
+
+#footer .contact-icons {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+
+#footer .contact-icons li{
+    float: left;
+}
+
+#footer .contact-icons li a{
+    display: block;
+    margin: 2px;
+    padding: 5px 12px;
+    font-size: 30px;
+}
+
+footer .links{
+    width: 10px;
+}
