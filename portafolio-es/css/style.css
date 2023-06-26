@@ -88,7 +88,6 @@ header .presentacion{
     font-size: 1.6rem;
     letter-spacing: 0.4rem;
     font-family: 'Playfair Display', serif;
-    
 }
 
 
@@ -198,8 +197,10 @@ header .presentacion{
     height: 100%;    
 }
 
-.nav_links a.abajo{
+header .nav.abajo.open{
+    background: black;
     color: #fff;
+    height: 100%;
 }
 
 header .nav.abajo{
@@ -208,10 +209,8 @@ header .nav.abajo{
     height: 4.5rem;   
 }
 
-header .nav.abajo.open{
-    background: black;
+.nav_links a.abajo{
     color: #fff;
-    height: 100%;
 }
 
 .nav_logo.abajo{
@@ -230,7 +229,7 @@ header .nav.abajo.open{
 .sobre-mi,
 .habilidades,
 .proyectos  {
-    margin-top: 100px;
+    margin-top: 5rem;
 }
 
 

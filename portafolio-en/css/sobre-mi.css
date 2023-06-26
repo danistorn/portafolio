@@ -7,21 +7,11 @@
     justify-items: center;
 
 
-    padding:10%;
+    padding: 3% 10% 8% 10%;
 
     background: linear-gradient(to top, rgba(149,120,147,1) 0%, rgba(232,143,203,0.05646008403361347) 70%, rgba(254,254,254,1) 100%);
 }
 
-
-
-@media (max-width: 1076px) {
-    .sobre-mi{
-        display: grid;
-        grid-template-columns: auto;
-        
-    }
-    
-}
 
 
 #sobre-mi .contenedor-foto img {
@@ -56,3 +46,13 @@
 }
 
 
+
+
+@media (max-width: 1076px) {
+    .sobre-mi{
+        display: grid;
+        grid-template-columns: auto;
+        
+    }
+    
+}
