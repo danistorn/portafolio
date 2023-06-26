@@ -14,8 +14,8 @@
 
 header {
     background-image:
-     linear-gradient(rgba(0, 0, 0, 0.8) 0%,
-    rgba(0, 0, 0, 0.5) 15%, rgb(0,0,0,0.2) 40%), url(../img/fondo3.jpg);
+     linear-gradient(rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0)), url(../img/fondo3.jpg);
     background-size: cover;
     background-position: center;
     /* width: 100vw; */
@@ -228,7 +228,14 @@ header .nav.abajo{
 
 @media (min-width: 768px) {     /* /////////// TAMAÑO GRANDE, TIPO COMPU  ///////*/
  
-    
+
+    header {
+        background-image:
+         linear-gradient(rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.5) 15%, rgb(0,0,0,0.2) 40%), url(../img/fondo3.jpg);
+    }
+
+
     nav{
         --state-hamburguer: scale(0);  /*Por defecto se mostrará el menu hamburguer*/
         --state-menu: translate(0);
@@ -240,7 +247,8 @@ header .nav.abajo{
     }
 
 
-    
+    /* El objetivo que marca target es siempre un <ELEMENTO> (Ej: <p>, <a>, <li>, etc)
+    O sea que acá, nav, no es un id="nav" sino un <nav> */
     .nav:target{
         --state-close: scale(0);  /*por defecto, la X no se va a mostrar*/
         

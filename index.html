@@ -48,9 +48,11 @@
 
     <header id="header"> <!-- nav + Presentación -->         
 
+            <!-- Ese elemento <nav> tiene un id (el que sea. en este caso justo se llama tmbn nav).
+                 y ese id va a estar ligado a un #
+                Si busco dentro de este <nav> los unicos que tienen id="nav" son el menu_hambruguesa.. -->
+            <nav class="nav" id="nav">  
 
-            <nav class="nav" id="nav">
-                
                 
                 <h2 class="nav_logo"><a href="#logo">DaniStor</a></h2>    
                 
@@ -79,7 +81,12 @@
             
                 <!--MENU HAMBURGUESA-->
                 
-                    <a href="#nav" class="nav_hamburguer" onclick="clickOpen()">
+                <!-- Aca abajo hay un nav con almoadilla # (el target) 
+                     Esta # hace referencian a un fragmentos de URL, en este caso el <i> (icono de la hamburguesa)
+                     En el css ese nav esta con un target y manupula la hamburguesa -->
+                
+
+                    <a href="#nav" class="nav_hamburguer" onclick="clickOpen()">    
                         <i class="fa-solid fa-bars nav_icon"></i>
                     </a>
 
@@ -87,7 +94,7 @@
                         <i class="fa-solid fa-x nav_icon"></i>
                     </a>
             
-        
+
 
             </nav>
 

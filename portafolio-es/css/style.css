@@ -14,8 +14,8 @@
 
 header {
     background-image:
-     linear-gradient(rgba(0, 0, 0, 0.8) 0%,
-      rgba(0, 0, 0, 0.5) 15%, rgb(0,0,0,0.2) 40%), url(../img/fondo3.jpg);
+     linear-gradient(rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0)), url(../img/fondo3.jpg);
     background-size: cover;
     background-position: center;
     /* width: 100vw; */
@@ -243,7 +243,12 @@ header .nav.abajo.open{
 
 @media (min-width: 768px) {     /* /////////// TAMAÑO GRANDE, TIPO COMPU  ///////*/
  
-    
+    header {
+        background-image:
+         linear-gradient(rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.5) 15%, rgb(0,0,0,0.2) 40%), url(../img/fondo3.jpg);
+    }
+
     nav{
         --state-hamburguer: scale(0); 
         --state-menu: translate(0);
