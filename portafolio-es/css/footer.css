@@ -1,6 +1,7 @@
 
 footer{
     display: block;
+    overflow-x: hidden;
 }
 
 #footer{

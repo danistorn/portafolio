@@ -10,6 +10,7 @@
     padding: 3% 10% 8% 10%;
 
     background: linear-gradient(to top, rgba(149,120,147,1) 0%, rgba(232,143,203,0.05646008403361347) 70%, rgba(254,254,254,1) 100%);
+    overflow-x: hidden;
 }
 
 

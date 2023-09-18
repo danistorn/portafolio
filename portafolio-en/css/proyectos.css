@@ -3,16 +3,9 @@
     height: 50em;
      */
     background-color:rgb(170, 148, 169);
+    overflow-x: hidden;
 }
 
-.proyectos {
-    /* display: grid;       El TITULO y las CARDS. Uno abajo del otro.
-    grid-template-columns: auto;
-    align-items: space-around; */
-    /*align-items: center;
-    justify-items:center;
-    position: relative; */
-}
 
 .proyectos .titulo_proyectos{
     text-align: center;

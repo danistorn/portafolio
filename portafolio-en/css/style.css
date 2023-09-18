@@ -6,7 +6,7 @@
     padding:0;
     box-sizing: border-box;
     text-decoration: none;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     scroll-behavior: smooth;
 }
 
@@ -20,7 +20,11 @@ header {
     background-position: center;
     min-height: 500px;
     height: 100vh;
-    
+    overflow-x: hidden;    
+}
+
+li {
+    list-style-type: none;
 }
 
 
