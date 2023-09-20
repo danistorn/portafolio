@@ -193,7 +193,8 @@ header .presentacion{
 .nav.open {
     /* El height a 100 para que al abrir el menu hamburguesa ocupe el 100 del largo de la pantalla */
     /* Lo coloco acá y no en el nav general para que solo ocupe el 100 cuando lo abro. No se vería pero si se veria la sombra de que se abre cuando bajo*/
-    height: 100%;    
+    height: 100%;   
+    z-index: 5; /*para que las flechitas de los certificados no esten por arriba del menu hamb*/ 
 }
 
 header .nav.abajo.open{
